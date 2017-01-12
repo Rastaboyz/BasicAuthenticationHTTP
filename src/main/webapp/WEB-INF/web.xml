@@ -21,6 +21,9 @@
       <http-method>GET</http-method>
       <http-method>POST</http-method>
     </web-resource-collection>
+
+    <!-- La configuracion de usuario se localiza en la carpeta de
+    tomcat que se hay configurado a la hora de arrancar el proyecto web -->
     <auth-constraint>
       <role-name>tomcat</role-name>
     </auth-constraint>
