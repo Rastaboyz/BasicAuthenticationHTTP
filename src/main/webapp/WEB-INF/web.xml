@@ -1,6 +1,4 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
@@ -25,7 +23,8 @@
     <!-- La configuracion de usuario se localiza en la carpeta de
     tomcat que se hay configurado a la hora de arrancar el proyecto web -->
     <auth-constraint>
-      <role-name>tomcat</role-name>
+      <!--<role-name>tomcat</role-name>-->
+      <role-name>admin</role-name>
     </auth-constraint>
 
     <user-data-constraint>
@@ -34,7 +33,15 @@
     </user-data-constraint>
   </security-constraint>
 
-  <login-config>
+  <!--<login-config>
     <auth-method>BASIC</auth-method>
+  </login-config>-->
+  <!--Defines Login Config -->
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login.jsp</form-login-page>
+      <form-error-page>/error.jsp</form-error-page>
+    </form-login-config>
   </login-config>
 </web-app>
