@@ -1,8 +1,7 @@
-
-
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <!-- Servlet de práctica en BASIC y FORM BASIC -->
   <servlet>
     <servlet-name>SecurityServlet</servlet-name>
     <servlet-class>SecurityServlet</servlet-class>
@@ -10,6 +9,16 @@
   <servlet-mapping>
     <servlet-name>SecurityServlet</servlet-name>
     <url-pattern>/SecurityServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- Servlet de práctica en Authenticating Users Programmatically -->
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
 
   <security-constraint>
@@ -20,8 +29,10 @@
       <http-method>POST</http-method>
     </web-resource-collection>
 
-    <!-- La configuracion de usuario se localiza en la carpeta de
-    tomcat que se hay configurado a la hora de arrancar el proyecto web -->
+    <!-- 1- La configuración de usuario se localiza en la carpeta de
+    tomcat que se hay configurado a la hora de arrancar el proyecto web
+         2- La configuración de usuario se localiza en la base de datos.
+   -->
     <auth-constraint>
       <!--<role-name>tomcat</role-name>-->
       <role-name>admin</role-name>
@@ -36,6 +47,7 @@
   <!--<login-config>
     <auth-method>BASIC</auth-method>
   </login-config>-->
+
   <!--Defines Login Config -->
   <login-config>
     <auth-method>FORM</auth-method>

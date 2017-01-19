@@ -11,6 +11,9 @@ import java.util.Enumeration;
  * Created by vitaly94 on 12/01/2017.
  */
 
+/**
+ * BASIC Authorization
+ */
 public class SecurityServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
